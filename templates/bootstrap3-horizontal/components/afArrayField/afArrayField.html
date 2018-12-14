@@ -3,6 +3,11 @@
     <label {{afFieldLabelAtts}}>{{afFieldLabelText name=this.atts.name}}</label>
     <div class="{{rightColumnClass}}">
       <div class="panel panel-default autoform-padding-fix">
+        {{#if afFieldInputAtts.tips}}
+          <div class="panel-body">
+            <span class="help-block {{afFieldInputAtts.tipsClass}}">{{{afFieldInputAtts.tips}}}</span>
+          </div>
+        {{/if}}
         {{#if afFieldIsInvalid name=this.atts.name}}
         <div class="panel-body has-error">
           <span class="help-block">{{{afFieldMessage name=this.atts.name}}}</span>

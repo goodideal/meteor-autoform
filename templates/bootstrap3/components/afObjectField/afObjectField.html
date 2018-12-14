@@ -6,6 +6,9 @@
     </div>
     {{/with}}
     <div class="panel-body {{bodyClass}}">
+      {{#if afFieldInputAtts.tips}}
+        <span class="help-block {{afFieldInputAtts.tipsClass}}">{{{afFieldInputAtts.tips}}}</span>
+      {{/if}}
       {{#if afFieldIsInvalid name=this.name}}
       <span class="help-block">{{{afFieldMessage name=this.name}}}</span>
       {{/if}}
